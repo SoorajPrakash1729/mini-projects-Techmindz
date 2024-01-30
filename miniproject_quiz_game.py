@@ -11,11 +11,11 @@ def newgame():#FUNCTION FOR HOW THE GAME WORKS
         your_ans=input('enter (A , B , C or D):')
         your_ans=your_ans.upper()
         your_ans_list.append(your_ans)
-        scores_of_ans+=check_ans(questions.get(key),your_ans)#COMPARING THE CORRECT OPTION (VALUES OF THE DICTIONARY) AND THE OPTION YOU GIVE and Storing it in Correct Ans
+        scores_of_ans+=check_ans(questions.get(key),your_ans)#COMPARING THE CORRECT OPTION (VALUES OF THE DICTIONARY) WITH THE ACTUAL ANSWER AND ADDING UP THE SCORE.
         quest_no+=1
     displayscore(scores_of_ans,your_ans_list)
 
-def check_ans(answer,your_ans):#FUNCTION FOR CHECKING OPTIONS--THAT ACTUAL OPE
+def check_ans(answer,your_ans):#FUNCTION FOR CHECKING OPTIONS--with the Actual correct ANSWERS
     if answer==your_ans:
         print('CORRECT!!')
         return 1# WE NEED RETURN VALUES O AND 1 INORDER TO COUNT THE MARKS

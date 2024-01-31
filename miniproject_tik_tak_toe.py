@@ -75,7 +75,7 @@ def play_game():
             if "-" not in board: #WHEN THE BOARD COMPLETELY FILLED WITH THE 'X's AND 'O's
                 print("It's a Tie")
             else:
-                print('yahoo...!! "',current_player," wins..!!!!")#PRINTING THE NAME OF THE WINNER WHO RECENTLY MATCHES THE WINNING CHANCE
+                print('yahoo...!! "',current_player,'" wins..!!!!')#PRINTING THE NAME OF THE WINNER WHO RECENTLY MATCHES THE WINNING CHANCE
         current_player = flip_player(current_player)#GAME WILL CONTINUE UNTIL DRAW OR FINDING THE WINNER
 
 play_game()

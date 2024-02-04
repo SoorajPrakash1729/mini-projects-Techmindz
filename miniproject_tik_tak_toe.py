@@ -64,7 +64,7 @@ def play_game():
     print("My Tic Tac Toe Game")
     display_board()
     player1, player2 = players()#SINCE PLAYER FUNCTION RETURNS TWO VALUES WE WILL ASSIGN IT IN PLAYER1 AND PLAYER2
-    current_player = "X"  # Set initial player to X
+    current_player = player1  # Set initial player to player 1
 
     # Loop to switch players and check for winner
     while game_on:
@@ -72,10 +72,10 @@ def play_game():
         display_board()
         if check_winner():
             game_on = False
-            if "-" not in board: #WHEN THE BOARD COMPLETELY FILLED WITH THE 'X's AND 'O's
+            if not check_winner(): #WHEN THE BOARD COMPLETELY FILLED WITH THE 'X's AND 'O's
                 print("It's a Tie")
             else:
-                print('yahoo...!! "',current_player,'" wins..!!!!')#PRINTING THE NAME OF THE WINNER WHO RECENTLY MATCHES THE WINNING CHANCE
+                print('yahoo...!! "',current_player," wins..!!!!")#PRINTING THE NAME OF THE WINNER WHO RECENTLY MATCHES THE WINNING CHANCE
         current_player = flip_player(current_player)#GAME WILL CONTINUE UNTIL DRAW OR FINDING THE WINNER
 
 play_game()
